@@ -1,0 +1,30 @@
+body {
+    background:
+        url(/images/sculpture_landing/full-bg.png) top left no-repeat;
+    background-size: cover;
+    height: 4608px;
+}
+
+
+.important {
+    contain: content;
+    display: block;
+    position: sticky;
+    top: 25%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+    text-align-last: justify;
+
+    filter: invert(0.9);
+    mix-blend-mode: difference;
+
+    font-size: 10vw;
+    line-height: 300%;
+
+    -webkit-transform: scale(1,4);
+    -moz-transform: scale(1,4);
+    -ms-transform: scale(1,4);
+    -o-transform: scale(1,4);
+    transform: scale(1,4);
+
+}
