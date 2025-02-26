@@ -1,0 +1,38 @@
+body {
+    background: black;
+    background-size: 50%;
+    font-family:'Courier New', Courier, monospace;
+    
+}
+
+.vertical {
+    -webkit-transform: scale(1,1.5);
+    -moz-transform: scale(1,1.5);
+    -ms-transform: scale(1,1.5);
+    -o-transform: scale(1,1.5);
+    transform: scale(1,1.5);
+}
+
+.vertical-less {
+    -webkit-transform: scale(1,1.25);
+    -moz-transform: scale(1,1.25);
+    -ms-transform: scale(1,1.25);
+    -o-transform: scale(1,1.25);
+    transform: scale(1,1.25);
+}
+
+.vertical-more {
+    -webkit-transform: scale(1,2);
+    -moz-transform: scale(1,2);
+    -ms-transform: scale(1,2);
+    -o-transform: scale(1,2);
+    transform: scale(1,2);
+}
+
+.vertical-moremore {
+    -webkit-transform: scale(1,2.5);
+    -moz-transform: scale(1,2.5);
+    -ms-transform: scale(1,2.5);
+    -o-transform: scale(1,2.5);
+    transform: scale(1,2.5);
+}
