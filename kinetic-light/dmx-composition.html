@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NO TIME TO CSS SS24</title>
+</head>
+<body>
+    <h1 style="text-align:center">dodgeball</h1>
+    <h2 style="text-align:center">in collaboration with denny, luna, and star</h2>
+    <h3 style="text-align:center">video by denny</h3>
+    <p>
+       there was never a moment where all four of us could meet up at the same time.
+       i thought each of us creating 4 distinct sequences and putting them one after another
+       would not end up creating a good composition, because it would feel disjointed and not
+       dynamic, due to it being like a stylistic switch up every ~30 seconds, while the structure
+       of a song does not typically have parts the exact same in length. i figured that the only
+       way to make the disjointedness make sense was to play into it more, and i thought that
+       we were supposed to make an infinite composition, so i implemented code so that everyone
+       made individual sequences, which were played in a random order. because we couldn't all meet up
+       simultaneously, i had to meet up with everyone individually to discuss the project, and 
+       nobody mentioned to me that it was not supposed to be an infinite sequence. 
+       <br><br>
+       i liked placing the dmx light in the middle of the room, when normally a spotlight would be placed
+       somewhere not visible, since the point of a spotlight is to draw someone's attention somewhere else.
+       <br><br>
+       i was thinking about how some music is perceived as "difficult", and harder to get into than other music,
+       and i was was thinking about how people only get to the point of listening to avant-garde and difficult
+       music after already listening to a lot of not avant-garde and not difficult music. i thought it might
+       be interesting to try to make a "difficult" composition of light, where there are sporadic elements
+       that you have to sit with before you fully see that it is actually specific sequences playing one after another.
+       this also became a really good way to test out all of the different functions and things you can do with the dmx light,
+       since playing into the unpredictable, disjointed feeling let me experiment with a variety of
+       intentionally highly different settings.
+       <br><br>
+       the generative aspect of the composition was a fun programming challenge, with the random sequence selector
+       by far being the most difficult to implement part of the code. part of this was because people have a tendency
+       to use delay() in their code instead of using millis() and waiting until they hit certain threshholds.
+       this is because delay() blocks the event loop, while millis() doesn't. however, it was interesting how
+       star's code, which used delay(), actually ended up as one of the most easily recognizable sequences -- because
+       it used delay(), and blocked the event loop, the amount of time it lasted was very consistent.
+    </p>
+    <video controls>
+        <source src="/images/kinetic-light/WeChat_20250326070341.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+</body>
+</html>

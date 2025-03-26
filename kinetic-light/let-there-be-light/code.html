@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>me and the code in the hotel lobby!</title>
+</head>
+<body>
+    void setup() {
+    <br>    pinMode(LED_BUILTIN, OUTPUT);
+    <br>    pinMode(3, OUTPUT);
+    <br>  }
+    <br>  
+    <br>  unsigned long interval = 5000;
+    <br>  bool flag = false;
+    <br>  int s = 0;
+    <br>  
+    <br>  void loop() {
+    <br>    if (millis() > interval) {
+    <br>      interval += random(2000, 10000);
+    <br>      s = random(7);
+    <br>      flag = true;
+    <br>    }
+      
+    <br>    switch (s) {
+    <br>      case 0: zero(flag); break; 
+    <br>      case 1: one(); break;
+    <br>      case 2: two(); break;
+    <br>      case 3: three(); break;
+    <br>      case 4: four(); break;
+    <br>      case 5: five(flag); break;
+    <br>      case 6: six(); break;
+    <br>      case 7: seven(); break;
+    <br>    }
+    <br>  
+    <br>   flag = false;
+    <br>  }
+    <br>  
+    <br> void zero(bool flag) {
+    <br>    if (flag) {
+    <br>      for (int i = 0; i < 10; i++) {
+    <br>        digitalWrite(3, HIGH);
+    <br>       delay(50);
+    <br>       digitalWrite(3, LOW);
+    <br>       delay(50);
+    <br>     }
+    <br>   }
+    <br>     digitalWrite(3, HIGH);
+    <br>  }
+    <br>  
+    <br> int brightness = 0;
+    <br> int fadeAmount = 5;
+    <br> void one() {
+    <br>   analogWrite(3, brightness);
+    <br>    brightness += fadeAmount;
+    <br>   if (brightness <= 0 || brightness >= 255) {
+    <br>     fadeAmount = -fadeAmount;
+    <br>    }
+    <br>    delay(30);
+    <br>  }
+    <br>  
+    <br>  void two() {
+    <br>    digitalWrite(3, HIGH);
+    <br>    delay(500);
+    <br>   digitalWrite(3, LOW);
+    <br>    delay(500);
+    <br>  }
+    <br>  
+    <br> void three() {
+    <br>   digitalWrite(3, HIGH);
+    <br>    delay(900);
+    <br>    digitalWrite(3, LOW);
+    <br>    delay(100);
+    <br>  }
+    <br>  
+    <br>  bool fourFlag = false;
+    <br>  void four() {
+    <br>    analogWrite(3, brightness);
+    <br>    
+    <br>    if (fourFlag) {
+    <br>      brightness += random(10);
+    <br>    } else {
+    <br>      brightness -= random(10);
+    <br>    }
+    <br>  
+    <br>    if (brightness >= 255) {
+    <br>      fourFlag = true;
+    <br>    } else if (brightness <= 0) {
+    <br>      fourFlag = false;
+    <br>    }
+    <br>  }
+    <br>  
+    <br>  void five(bool flag) {
+    <br>    if (flag) {
+    <br>      for (int i = 0; i < 3; i++) {
+    <br>        digitalWrite(3, HIGH);
+    <br>        delay(500);
+    <br>        digitalWrite(3, LOW);
+    <br>        delay(500);  
+    <br>      }
+    <br>    } else {
+    <br>      four();
+    <br>    }
+    <br>  }
+    <br>  
+    <br> void six() {
+    <br>    digitalWrite(3, HIGH);
+    <br>    delay(3000);
+    <br>    digitalWrite(3, LOW);
+    <br>    delay(3000);
+    <br>  }
+    <br>  
+    <br>  void seven() {
+    <br>    digitalWrite(3, HIGH);
+    <br>    delay(3000);
+    <br>    digitalWrite(3, LOW);
+    <br>    delay(1000);
+    <br>  }
+</body>
+</html>
