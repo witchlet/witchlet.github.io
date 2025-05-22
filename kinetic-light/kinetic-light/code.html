@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>me and the code in the hotel lobby!</title>
+</head>
+<body>
+    <pre>
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(5, OUTPUT);
+  //Serial.begin(9600);
+}
+
+unsigned long lightInterval = 500;
+bool lightState = false;
+
+unsigned long dcInterval = 5000;
+int val = 25;
+int targetVal = 25;
+
+void loop() {
+  if (millis() > lightInterval) {
+    lightInterval += curvedRand(1, 1000, 5, false);
+    lightState = !lightState;
+    digitalWrite(3, lightState);
+    digitalWrite(LED_BUILTIN, lightState);
+  }
+  
+  if (millis() > dcInterval) {
+    dcInterval += curvedRand(1000, 10000, 3, true);
+    targetVal = random(20, 50);
+  }
+
+  if (val < targetVal) {
+    val++;
+  } else if (val > targetVal) {
+    val--;
+  }
+  analogWrite(5, val);
+}
+
+int curvedRand(int low, int high, int curve, bool greater) {
+  int num = high;
+  for (int i = 0; i < curve; i++) {
+    int randNum = random(low, high);
+    
+    if (!greater) {
+      if (randNum < num) {
+        num = randNum;
+      }
+    } else {
+      if (randNum > num) {
+        num = randNum;
+      }
+    }
+  }
+
+  return num;
+}
+
+    </pre>
+</body>
+</html>
